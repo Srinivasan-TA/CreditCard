@@ -5,9 +5,10 @@ import java.util.logging.Logger;
 
 
 class Sri{
-    public static Logger e = Logger.getLogger("com.api.jar");
+
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
+        Logger e = Logger.getLogger("com.api.jar");
         e.info("Enter the credit card name:");
         String name = sc.nextLine();
         e.info("Enter the credit card number:");
@@ -19,8 +20,8 @@ class Sri{
         Card s1=new Card(name,number,date);
         Card s3=(Card)s1.clone();
         e.info("result is "+ s3.equalling(number1));
-        System.out.println(s1);
-        System.out.println(s3);
+        e.info(":"+s1);
+        e.info(":"+ s3);
     }
 }
 class Card implements Cloneable{
