@@ -1,21 +1,24 @@
 package org.example;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
+
 
 class Sri{
+    Logger e = Logger.getLogger("com.api.jar");
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the credit card name:");
+        e.info("Enter the credit card name:");
         String name = sc.nextLine();
-        System.out.println("Enter the credit card number:");
+        e.info("Enter the credit card number:");
         String number = sc.nextLine();
-        System.out.println("enter the expiration date");
+        e.info("enter the expiration date");
         String date=sc.nextLine();
-        System.out.println("Enter the credit card number:");
+        e.info("Enter the credit card number:");
         String number1 = sc.nextLine();
         Card s1=new Card(name,number,date);
         Card s3=(Card)s1.clone();
-        System.out.println("result is "+ s3.equalling(number1));
+        e.info("result is "+ s3.equalling(number1));
     }
 }
 class Card implements Cloneable{
