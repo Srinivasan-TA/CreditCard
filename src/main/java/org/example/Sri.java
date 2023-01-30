@@ -1,8 +1,8 @@
 package org.example;
 
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 class Sri{
 
@@ -19,9 +19,9 @@ class Sri{
         String number1 = sc.nextLine();
         Card s1=new Card(name,number,date);
         Card s3=(Card)s1.clone();
-        e.info("result is "+ s3.equalling(number1));
-        e.info(":"+s1);
-        e.info(":"+ s3);
+        e.log(Level.INFO,() ->"result is "+ s3.equalling(number1));
+        e.log(Level.INFO,() ->":"+s1);
+        e.log(Level.INFO,()->":"+ s3);
     }
 }
 class Card implements Cloneable{
