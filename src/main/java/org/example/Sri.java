@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 
 class Sri{
-    Logger e = Logger.getLogger("com.api.jar");
+    public static Logger e = Logger.getLogger("com.api.jar");
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
         e.info("Enter the credit card name:");
@@ -19,16 +19,18 @@ class Sri{
         Card s1=new Card(name,number,date);
         Card s3=(Card)s1.clone();
         e.info("result is "+ s3.equalling(number1));
+        System.out.println(s1);
+        System.out.println(s3);
     }
 }
 class Card implements Cloneable{
-    static  String name;
-    static String number ;
-    static String date;
+     String name;
+     String number ;
+     String date;
     Card(String name,String number,String date){
-        Card.name =name;
-        Card.number =number;
-        Card.date =date;
+        this.name =name;
+        this.number =number;
+        this.date =date;
     }
     protected Object clone() throws CloneNotSupportedException
     {
