@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 class Sri{
     public static void main(String[] args)  {
+
         Logger l = Logger.getLogger("com.api.jar");
         Scanner sc = new Scanner(System.in);
         try {
